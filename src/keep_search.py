@@ -48,8 +48,8 @@ def main():
             if 'photo' in detailPage[j]:
                 item = detailPage[j].get("photo")
                 postPageList.append(item)
-            for postPage in postPageList:
-                downloadPic(postPage,storagePath+'/'+folderName+'/')
+        for postPage in postPageList:
+            downloadPic(postPage,storagePath+'/'+folderName+'/')
         url = getNextPage(html,tags)
         #print(url)
         print("爬取第{0}页面照片数为{1}".format(i+1,len(postPageList)))
